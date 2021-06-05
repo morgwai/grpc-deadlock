@@ -1,0 +1,20 @@
+// Copyright (c) Piotr Morgwai Kotarbinski, Licensed under the Apache License, Version 2.0
+syntax = "proto3";
+package pl.morgwai.samples.grpc.deadlock;
+
+option java_outer_classname = "EchoProto";
+option java_multiple_files = true;
+
+service EchoService {
+	rpc multiEcho(EchoRequest) returns (stream EchoResposne) {}
+}
+
+// I tend to generate these myself quite often  ;-]
+message EchoRequest {
+	string inconsideratedVerbalVomit = 1;
+	uint32 reps = 2;
+}
+
+message EchoResposne {
+	string echoedVomit = 1;
+}
