@@ -46,3 +46,5 @@ Client:
 ...and both hang indefinitely.
 
 If [line 27 in EchoServer](src/main/java/pl/morgwai/samples/grpc/deadlock/EchoServer.java#L27) and [lines 40](src/main/java/pl/morgwai/samples/grpc/deadlock/EchoService.java#L40) + [78 in EchoService](src/main/java/pl/morgwai/samples/grpc/deadlock/EchoService.java#L78) are uncommented, then everything works fine.
+
+Posted [question to grpc group](https://groups.google.com/g/grpc-io/c/SFkHi1gvKx4) regarding this.
